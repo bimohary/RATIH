@@ -1,0 +1,34 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 244, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/script.rpy", line 26, in script
+    show logo_teks at truecenter with dissolve ("images/Logo_PENS white.png")
+TypeError: 'Dissolve' object is not callable
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 244, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/script.rpy", line 26, in script
+    show logo_teks at truecenter with dissolve ("images/Logo_PENS white.png")
+  File "/Applications/TA 2/renpy-8.3.7-sdk/renpy/ast.py", line 1374, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "/Applications/TA 2/renpy-8.3.7-sdk/renpy/exports/statementexports.py", line 257, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Applications/TA 2/renpy-8.3.7-sdk/renpy/display/core.py", line 1581, in do_with
+    return self.interact(trans_pause=True,
+  File "/Applications/TA 2/renpy-8.3.7-sdk/renpy/display/core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/TA 2/renpy-8.3.7-sdk/renpy/display/core.py", line 2669, in interact_core
+    trans = instantiate_transition(None, old_root, layers_root)
+  File "/Applications/TA 2/renpy-8.3.7-sdk/renpy/display/core.py", line 2578, in instantiate_transition
+    trans = self.ongoing_transition[layer](
+TypeError: 'Dissolve' object is not callable
+
+macOS-10.15.7-x86_64-i386-64bit x86_64
+Ren'Py 8.3.7.25031702
+Ratih: Her Journey Through Social Anxiety 1.0
+Sat Mar 14 13:39:02 2026
